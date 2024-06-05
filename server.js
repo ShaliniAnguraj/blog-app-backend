@@ -29,6 +29,8 @@ app.use("/api/v1/blog", blogRoutes);
 
 // Port
 const PORT = process.env.PORT || 8080;
+
+
 //listen
 app.listen(PORT, () => {
   console.log(
@@ -36,3 +38,6 @@ app.listen(PORT, () => {
       .white
   );
 });
+app.get("/",(req,res) =>{
+  res.send("blogs are working fine")
+})
